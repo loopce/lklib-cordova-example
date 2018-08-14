@@ -1,0 +1,18 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "lklib-cordova-plugin": {
+    "source": {
+      "type": "local",
+      "path": "/Users/sandoval/Loop/code/lklib-cordova-example/node_modules/lklib-cordova-plugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
