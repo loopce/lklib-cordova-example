@@ -1,4 +1,5 @@
 platforms/
+plugins/
 
 # General
 .DS_Store

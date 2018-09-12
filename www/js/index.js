@@ -33,6 +33,8 @@ var app = {
         console.log(md);
         console.log(window.LKLib);
         window.LKLib.hello();
+        
+        window.addEventListener("lkreachabledevices", this.onReachableDevices, false);
     },
 
     // Update DOM on a Received Event
@@ -45,6 +47,12 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    onReachableDevices: function(event)
+    {
+        var devices = event.devices;
+        console.log(devices);
     }
 };
 
