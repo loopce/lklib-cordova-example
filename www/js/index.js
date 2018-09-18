@@ -59,10 +59,18 @@ var app = {
     unlockDevice: function()
     {
         console.log("Unlocking device...");
+        // Regular device:
         var device = {
             "serial": "<<INSERT YOUR LOOPKEY SERIAL HERE>>",
             "key": "<<INSERT YOUR KEY HERE>>"
         };
+        // Device of kind multiple (e.g. lockers):
+        // var device = {
+        //     "serial": "<<INSERT YOUR LOOPKEY SERIAL HERE>>",
+        //     "key": "<<INSERT YOUR KEY HERE>>",
+        //     "kind": "MULTIPLE",
+        //     "commandData": "CAEC" // The locker code to open.
+        // };
         window.LKLib.communicateWithDevice(device, "unlock", function(result) {
             console.log(result);
         }, function(err) {
