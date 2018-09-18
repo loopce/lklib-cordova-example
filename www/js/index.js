@@ -35,6 +35,7 @@ var app = {
         window.LKLib.hello();
         
         window.addEventListener("lkreachabledevices", this.onReachableDevices, false);
+        document.getElementById("unlockDeviceButton").addEventListener("click", this.unlockDevice, false);
     },
 
     // Update DOM on a Received Event
@@ -53,6 +54,20 @@ var app = {
     {
         var devices = event.devices;
         console.log(devices);
+    },
+
+    unlockDevice: function()
+    {
+        console.log("Unlocking device...");
+        var device = {
+            "serial": "<<INSERT YOUR LOOPKEY SERIAL HERE>>",
+            "key": "<<INSERT YOUR KEY HERE>>"
+        };
+        window.LKLib.communicateWithDevice(device, "unlock", function(result) {
+            console.log(result);
+        }, function(err) {
+            console.log(err);
+        });
     }
 };
 
